@@ -5,8 +5,9 @@
 #ifndef DIVERTPROJECT_RANGEDWEAPON_H
 #define DIVERTPROJECT_RANGEDWEAPON_H
 
+#include "Weapon.h"
 
-class RangedWeapon {
+class RangedWeapon: public Weapon {
 public:
     int getRange() const;
 

@@ -5,8 +5,9 @@
 #ifndef DIVERTPROJECT_MELEEWEAPON_H
 #define DIVERTPROJECT_MELEEWEAPON_H
 
+#include "Weapon.h"
 
-class MeleeWeapon {
+class MeleeWeapon: public Weapon {
 public:
     int getSharpness() const;
 

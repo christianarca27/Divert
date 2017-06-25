@@ -8,7 +8,7 @@
 
 #include "BuyableItems.h"
 
-class Weapon: BuyableItems {
+class Weapon: public BuyableItems {
 public:
     int getDamage() const;
 

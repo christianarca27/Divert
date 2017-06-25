@@ -6,8 +6,9 @@
 #define DIVERTPROJECT_POTION_H
 
 #include <string>
+#include "BuyableItems.h"
 
-class Potion {
+class Potion: public BuyableItems {
 public:
     const std::string &getType() const;
 
