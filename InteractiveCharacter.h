@@ -11,6 +11,8 @@
 
 class InteractiveCharacter: public Interactive {
 public:
+    InteractiveCharacter(int x, int y, std::string n):Interactive(x,y), name(n){};
+
     const std::string &getName() const;
 
     void setName(const std::string &name);

@@ -8,15 +8,17 @@
 
 class Interactive {
 public:
-    void Interaction();
+    explicit Interactive::Interactive (int x, int y): posX(x),posY(y){}
 
-    int getPosX() const;
+    virtual void Interaction()=0;
 
-    void setPosX(int posX);
+    virtual int getPosX() const;
 
-    int getPosY() const;
+    virtual void setPosX(int posX);
 
-    void setPosY(int posY);
+    virtual int getPosY() const;
+
+    virtual void setPosY(int posY);
 
 protected:
     int posX;

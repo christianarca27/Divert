@@ -19,3 +19,4 @@ int Interactive::getPosY() const {
 void Interactive::setPosY(int posY) {
     Interactive::posY = posY;
 }
+
