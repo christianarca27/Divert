@@ -13,9 +13,17 @@ public:
 
     static void initRandom();
 
+    static int getRolls();
+
+    static void setRolls(int rolls);
+
+    int getFaces() const;
+
+    void setFaces(int faces);
+
 private:
+    static int rolls;
     int faces;
-    static int Rolls;
 };
 
 
