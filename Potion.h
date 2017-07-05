@@ -10,6 +10,7 @@
 
 class Potion: public BuyableItems {
 public:
+
     const std::string &getType() const;
 
     void setType(const std::string &type);

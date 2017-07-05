@@ -10,6 +10,8 @@
 
 class Weapon: public BuyableItems {
 public:
+    Weapon(int d, int r, int i, int h, bool m, int p, int l, bool a): damage(d), rate(r), integrity(i), numberOfHits(h), magic(m), BuyableItems (p, l, a){};
+    ~Weapon(){};
     int getDamage() const;
 
     void setDamage(int damage);
