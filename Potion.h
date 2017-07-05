@@ -10,6 +10,9 @@
 
 class Potion: public BuyableItems {
 public:
+    Potion(std::string t, int hp, int s, int r, int p, int l, bool a) : type(t), hpIncrease(hp), strengthIncrease(s), resistanceIncrease(r), BuyableItems(p, l, a) {};
+    ~Potion(){};
+
     const std::string &getType() const;
 
     void setType(const std::string &type);

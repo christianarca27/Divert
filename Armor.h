@@ -10,6 +10,8 @@
 
 class Armor: public BuyableItems {
 public:
+    Armor(int d, bool m, int p, int l, bool a) : damageDecreaser(d), magical(m), BuyableItems(p, l, a){};
+    ~Armor() {};
 
     int getDamageDecreaser() const;
 
