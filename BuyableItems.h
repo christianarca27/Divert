@@ -8,7 +8,8 @@
 
 class BuyableItems {
 public:
-    explicit BuyableItems(int l=1, int p, bool aviable=TRUE):level(l), price(p), aviability(aviable){};
+    BuyableItems(int l, int p, bool a=0): level(l), price(p), availability(a){};
+
     virtual ~BuyableItems() {};
 
     virtual int getLevel() const=0;
