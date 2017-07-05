@@ -31,11 +31,11 @@ public:
     void setMagical(bool magical);
 
 protected:
-    virtual int damage;
-    virtual int rate;
-    virtual int integrity;
-    virtual int numberOfHits;
-    virtual bool magical;
+    int damage;
+    int rate;
+    int integrity;
+    int numberOfHits;
+    bool magical;
 };
 
 

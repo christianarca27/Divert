@@ -9,7 +9,6 @@
 #include "Race.h"
 #include "Armor.h"
 #include "Weapon.h"
-#include "EnemyCharacter.h"
 
 
 class GameCharacter {
