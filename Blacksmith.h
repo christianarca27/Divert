@@ -7,11 +7,14 @@
 
 
 #include "InteractiveCharacter.h"
+#include "Weapon.h"
+#include "PlayableCharacter.h"
 
 class Blacksmith: public InteractiveCharacter {
 public:
-    void repairWeapon();
-    void calcolateRepairCost();
+    Blacksmith (int x, int y, std::string n):InteractiveCharacter (x,y,n){};
+    void repairWeapon(Weapon& brokenWeapon, PlayableCharacter& player);
+    int calcolateRepairCost(Weapon& brokenWeapon);
 
 
 };
