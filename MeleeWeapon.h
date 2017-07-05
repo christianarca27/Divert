@@ -9,6 +9,9 @@
 
 class MeleeWeapon: public Weapon {
 public:
+    MeleeWeapon(int s, int hW, bool iB, int d, int r, int i, int h, bool m, int p, int l, bool a) : sharpness(s), healtWeapon(hW), isBroken(iB), Weapon(d, r, i, h, m, p, l, a) {};
+    ~MeleeWeapon() {};
+
     int getSharpness() const;
 
     void setSharpness(int sharpness);
