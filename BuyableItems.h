@@ -8,20 +8,20 @@
 
 class BuyableItems {
 public:
-    explicit BuyableItems(int l=1, int p, bool aviable=TRUE):level(l), price(p), aviability(aviable){};
+    explicit BuyableItems(int p, int l=1, bool a=true) : level(l), price(p), availability(a) {};
     virtual ~BuyableItems() {};
 
-    virtual int getLevel() const=0;
+    virtual int getLevel() const;
 
-    virtual void setLevel(int level)=0;
+    virtual void setLevel(int level);
 
-    virtual int getPrice() const=0;
+    virtual int getPrice() const;
 
-    virtual void setPrice(int price)=0;
+    virtual void setPrice(int price);
 
-    virtual bool isAvailability() const=0;
+    virtual bool isAvailability() const;
 
-    virtual void setAvailability(bool availability)=0;
+    virtual void setAvailability(bool availability);
 
 protected:
     int level;
