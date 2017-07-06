@@ -8,8 +8,9 @@
 #include <string>
 #include "Inventory.h"
 #include "GameCharacter.h"
+#include "Interactive.h"
 
-class PlayableCharacter {
+class PlayableCharacter : GameCharacter {
 public:
     void openInventory(Inventory* inventory);
     void levelUp(int level, int exp);

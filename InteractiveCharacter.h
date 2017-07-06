@@ -9,9 +9,9 @@
 #include "Interactive.h"
 #include <string>
 
-class InteractiveCharacter: public Interactive {
+class InteractiveCharacter : public Interactive {
 public:
-    InteractiveCharacter(int x, int y, std::string n):Interactive(x,y), name(n){};
+    InteractiveCharacter(int x, int y, std::string n) : Interactive(x, y), name(n) {};
 
     const std::string &getName() const;
 

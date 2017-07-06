@@ -5,11 +5,16 @@
 #ifndef DIVERTPROJECT_BUYABLEITEMS_H
 #define DIVERTPROJECT_BUYABLEITEMS_H
 
+#include <string>
 
 class BuyableItems {
 public:
-    explicit BuyableItems(int p, int l=1, bool a=true) : level(l), price(p), availability(a) {};
+    explicit BuyableItems(std::string n, int p, int l=1, bool a=true) : name(n), price(p), level(l), availability(a) {};
     virtual ~BuyableItems() {};
+
+    virtual const std::string &getName() const;
+
+    virtual void setName(const std::string &name);
 
     virtual int getLevel() const;
 
@@ -24,6 +29,7 @@ public:
     virtual void setAvailability(bool availability);
 
 protected:
+    std::string name;
     int level;
     int price;
     bool availability;

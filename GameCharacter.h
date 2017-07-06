@@ -13,8 +13,8 @@
 
 class GameCharacter {
 public:
-    virtual void move(float posX, float posY)=0;
-    virtual void attack(GameCharacter& enemy)=0;
+    virtual void move(float posX, float posY) = 0;
+    virtual void attack(GameCharacter& enemy) = 0;
 
     const std::string &getName() const;
 

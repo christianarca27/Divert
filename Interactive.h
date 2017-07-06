@@ -8,7 +8,7 @@
 
 class Interactive {
 public:
-    explicit Interactive (int x, int y): posX(x),posY(y){}
+    explicit Interactive (int x, int y) : posX(x), posY(y) {};
 
     virtual void Interaction()=0;
 

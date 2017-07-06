@@ -8,8 +8,10 @@
 
 #include "InteractiveCharacter.h"
 
-class Vendor: public InteractiveCharacter {
+class Vendor : public InteractiveCharacter {
 public:
+    Vendor(int x, int y, std::string n) : InteractiveCharacter(x, y, n) {};
+
     void sellItem();
     void buyItem();
 private:

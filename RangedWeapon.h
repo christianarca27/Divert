@@ -9,8 +9,8 @@
 
 class RangedWeapon: public Weapon {
 public:
-    RangedWeapon(int range, int s,int d, int r, int i, int h, bool m, int p, int l, bool a):range(range),shots(s), Weapon(d,r,i,h,m,p,l,a){};
-    ~RangedWeapon(){};
+    RangedWeapon(int range, int s, int d, int r, int i, int h, bool m, std::string n, int p, int l, bool a) : range(range), shots(s), Weapon(d, r, i, h, m, n, p, l, a) {};
+    ~RangedWeapon() {};
     int getRange() const;
 
     void setRange(int range);

@@ -8,11 +8,13 @@
 #include <string>
 #include "Interactive.h"
 
-class InteractiveItems: public Interactive {
+class InteractiveItems : public Interactive {
 public:
+    InteractiveItems(std::string t, int x, int y) : type(t), Interactive(x, y) {};
     void dropItems();
+
 private:
-    std::string type();
+    std::string type;
 
 };
 

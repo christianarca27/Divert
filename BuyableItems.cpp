@@ -27,3 +27,11 @@ bool BuyableItems::isAvailability() const {
 void BuyableItems::setAvailability(bool availability) {
     BuyableItems::availability = availability;
 }
+
+const std::string &BuyableItems::getName() const {
+    return name;
+}
+
+void BuyableItems::setName(const std::string &name) {
+    BuyableItems::name = name;
+}

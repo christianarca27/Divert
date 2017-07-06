@@ -13,3 +13,16 @@ int Inventory::getCapacity() const {
 void Inventory::setCapacity(int capacity) {
     Inventory::capacity = capacity;
 }
+
+void Inventory::addItem(BuyableItems& item) {
+    itemList.push_back(&item);
+}
+
+void Inventory::removeItem(BuyableItems &item) {
+    itemList.remove(&item);
+}
+
+void Inventory::printInventory() {
+    for(auto itr = itemList.begin(); itr != itemList.end(); itr++)
+        std::cout << (*itr)->getName() << std::endl;
+}

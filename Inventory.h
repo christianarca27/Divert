@@ -7,14 +7,18 @@
 
 #include <list>
 #include "BuyableItems.h"
+#include <iostream>
 
 class Inventory {
 public:
     Inventory(int c=0);
 
+    void addItem(BuyableItems& item);
+    void removeItem(BuyableItems& item);
+    void printInventory();
+
     void orderByLevel();
     void orderByName();
-    void deleteItem();
     void useItem();
 
     int getCapacity() const;
