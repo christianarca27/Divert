@@ -4,11 +4,7 @@
 
 #include "Inventory.h"
 
-Inventory::Inventory(std::_List_iterator<BuyableItems>* ptr, int c) {
-    std::list<BuyableItems> itemList;
-    auto itr = itemList.begin();
-    ptr = &(itr);
-}
+Inventory::Inventory(int c) : capacity(c) {}
 
 int Inventory::getCapacity() const {
     return capacity;

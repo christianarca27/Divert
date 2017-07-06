@@ -10,7 +10,7 @@
 
 class Inventory {
 public:
-    Inventory(std::_List_iterator<BuyableItems>* ptr, int c=0);
+    Inventory(int c=0);
 
     void orderByLevel();
     void orderByName();
@@ -23,7 +23,7 @@ public:
 
 private:
     int capacity;
-    std::_List_iterator<BuyableItems>* beginList;
+    std::list<BuyableItems*> itemList;
 };
 
 
