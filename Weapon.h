@@ -10,7 +10,7 @@
 
 class Weapon: public BuyableItems {
 public:
-    Weapon(int d, int r, int i, int h, bool m, std::string n, int p, int l, bool a): damage(d), rate(r), integrity(i), numberOfHits(h), magical(m), BuyableItems (n, p, l, a) {};
+    Weapon(int d, int r, int i, int h, bool m, std::string n, int p, int l, bool a, int ra, int hw): damage(d), rate(r), integrity(i), numberOfHits(h), magical(m),range(ra), healtWeapon(hw),BuyableItems (n, p, l, a) {};
     virtual ~Weapon(){};
     int getDamage() const;
 
@@ -32,12 +32,22 @@ public:
 
     void setMagical(bool magical);
 
+    int getRange() const;
+
+    void setRange(int range);
+
+    int getHealtWeapon() const;
+
+    void setHealtWeapon(int healtWeapon);
+
 protected:
     int damage;
     int rate;
     int integrity;
     int numberOfHits;
     bool magical;
+    int range;
+    int healtWeapon;
 };
 
 
