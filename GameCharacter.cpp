@@ -29,7 +29,13 @@ void GameCharacter::attack(GameCharacter& enemy){
         std::cout<<"enemy is dead"<<std::endl;
     else
         enemy.hp=enemyHealth;
-};
+}
+
+void GameCharacter::move(float posX, float posY, GameMap* gM) {
+
+    //implementazione
+
+}
 
 const std::string &GameCharacter::getName() const {
     return name;

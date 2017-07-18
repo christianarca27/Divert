@@ -9,11 +9,12 @@
 #include "Race.h"
 #include "Armor.h"
 #include "Weapon.h"
+#include "GameMap.h"
 
 
 class GameCharacter {
 public:
-    virtual void move(float posX, float posY) = 0;
+    virtual void move(float posX, float posY, GameMap* gM) = 0;
     virtual void attack(GameCharacter& enemy) = 0;
 
     const std::string &getName() const;

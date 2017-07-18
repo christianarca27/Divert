@@ -12,7 +12,7 @@ class EnemyCharacter : public GameCharacter {
 public:
     void drop(int level);
     void update();
-    void move(float posX, float posY) override;
+    void move(float posX, float posY, GameMap* gM) override;
     void attack(GameCharacter& enemy) override;
 
 private:
