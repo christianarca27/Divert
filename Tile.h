@@ -9,14 +9,15 @@
 
 
 class Tile {
-    Tile(std::string p, int h=1, int l=1) : path(p), high(h), length(l) {};
-    ~Tile();
+public:
+    Tile(std::string p, bool c, int h=1, int l=1) : path(p), crossable(c), high(h), length(l) {};
     void displayTile(int posX, int posY);
 
 private:
     std::string path;
     int high;
     int length;
+    bool crossable;
 };
 
 
