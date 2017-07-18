@@ -12,14 +12,6 @@ void MeleeWeapon::setSharpness(int sharpness) {
     MeleeWeapon::sharpness = sharpness;
 }
 
-int MeleeWeapon::getHealtWeapon() const {
-    return healtWeapon;
-}
-
-void MeleeWeapon::setHealtWeapon(int healtWeapon) {
-    MeleeWeapon::healtWeapon = healtWeapon;
-}
-
 bool MeleeWeapon::isIsBroken() const {
     return isBroken;
 }

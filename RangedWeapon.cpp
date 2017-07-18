@@ -4,13 +4,6 @@
 
 #include "RangedWeapon.h"
 
-int RangedWeapon::getRange() const {
-    return range;
-}
-
-void RangedWeapon::setRange(int range) {
-    RangedWeapon::range = range;
-}
 
 int RangedWeapon::getShots() const {
     return shots;

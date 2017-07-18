@@ -9,16 +9,12 @@
 
 class MeleeWeapon: public Weapon {
 public:
-    MeleeWeapon(int s, int hW, bool iB, int d, int r, int i, int h, bool m, std::string n, int p, int l, bool a) : sharpness(s), healtWeapon(hW), isBroken(iB), Weapon(d, r, i, h, m, n, p, l, a) {};
+    MeleeWeapon(int s, int hW, bool iB, int d, int r, int i, int h, bool m, std::string n, int p, int l, bool a, int ra, int hw) : sharpness(s), isBroken(iB), Weapon(d, r, i, h, m, n, p, l, a, ra, hw) {};
     ~MeleeWeapon() {};
 
     int getSharpness() const;
 
     void setSharpness(int sharpness);
-
-    int getHealtWeapon() const;
-
-    void setHealtWeapon(int healtWeapon);
 
     bool isIsBroken() const;
 
@@ -26,7 +22,6 @@ public:
 
 private:
     int sharpness;
-    int healtWeapon;
     bool isBroken;
 
 };

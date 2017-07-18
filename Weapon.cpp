@@ -3,6 +3,21 @@
 //
 
 #include "Weapon.h"
+int Weapon::getRange() const {
+    return range;
+}
+
+void Weapon::setRange(int range) {
+    Weapon::range = range;
+}
+
+int Weapon::getHealtWeapon() const {
+    return healtWeapon;
+}
+
+void Weapon::setHealtWeapon(int healtWeapon) {
+    Weapon::healtWeapon = healtWeapon;
+}
 
 int Weapon::getDamage() const {
     return damage;

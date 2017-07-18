@@ -1,8 +1,35 @@
 //
 // Created by chris on 24/06/2017.
 //
+#include <iostream>
 
 #include "GameCharacter.h"
+#include "Dice.h"
+
+void GameCharacter::attack(GameCharacter& enemy){
+    Dice d8(8);
+    Dice d10 (10);
+    int rollResult=d8.roll(4);
+    int damage=this->weapon->getDamage()*this->weapon->getIntegrity()*rollResult+this->getStrength();
+    if (this->weapon->isMagical())
+        damage=damage*2;
+    int newNumberOfHits=this->weapon->getNumberOfHits();
+    this->weapon->setNumberOfHits(newNumberOfHits++);
+    int newIntegrity=(this->weapon->getHealtWeapon() / this->weapon->getNumberOfHits())*100;
+    this->weapon->setIntegrity(newIntegrity);
+    int resistance=enemy.resistance/d10.roll(4);
+    int enemyHealth= enemy.hp+resistance;
+    if (enemy.armor!= nullptr){
+        damage=damage-enemy.armor->getDamageDecreaser();
+                if (enemy.armor->isMagical())
+                    damage=damage/2;
+    }
+    enemyHealth-=damage;
+    if (enemyHealth<=0)
+        std::cout<<"enemy is dead"<<std::endl;
+    else
+        enemy.hp=enemyHealth;
+};
 
 const std::string &GameCharacter::getName() const {
     return name;
