@@ -33,7 +33,8 @@ void GameCharacter::attack(GameCharacter& enemy){
 
 void GameCharacter::move(float posX, float posY, GameMap* gM) {
 
-    //implementazione
+    // implementazione
+
 
 }
 
