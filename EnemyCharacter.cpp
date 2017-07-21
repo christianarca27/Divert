@@ -23,11 +23,3 @@ void EnemyCharacter::drop(PlayableCharacter& player,int level) {
             MeleeWeapon magicSword(20, false, 10, 1, 100, 0, true, "Sword of Destiny", level, 1000, true, 1, 2500);
     }
 }
-
-int EnemyCharacter::getIntelligence() const {
-    return intelligence;
-}
-
-void EnemyCharacter::setIntelligence(int intelligence) {
-    EnemyCharacter::intelligence = intelligence;
-}

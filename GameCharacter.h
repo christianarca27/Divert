@@ -14,52 +14,22 @@
 
 class GameCharacter {
 public:
-    virtual void move(float posX, float posY, GameMap* gM) = 0;
-    virtual void attack(GameCharacter& enemy) = 0;
+    GameCharacter(std::string n, int h, int l, int str, int r, int s, Race* rc=nullptr, Armor* a=nullptr, Weapon* w=nullptr, int x=0, int y=0) : name(n), hp(h), level(l), strength(str), resistance(r), stamina(s), race(rc), weapon(w), posX(x), posY(y){};
 
-    const std::string &getName() const;
-
-    void setName(const std::string &name);
-
-    int getHp() const;
-
-    void setHp(int hp);
-
-    int getLevel() const;
-
-    void setLevel(int level);
-
-    Race *getRace() const;
-
-    void setRace(Race *race);
+    virtual void move(int x, int y, GameMap gM)=0;
+    virtual void attack(GameCharacter& enemy);
 
     int getStrength() const;
 
     void setStrength(int strength);
 
-    int getResistance() const;
+    int getPosX() const;
 
-    void setResistance(int resistance);
+    void setPosX(int posX);
 
-    int getStamina() const;
+    int getPosY() const;
 
-    void setStamina(int stamina);
-
-    Armor *getArmor() const;
-
-    void setArmor(Armor *armor);
-
-    Weapon *getWeapon() const;
-
-    void setWeapon(Weapon *weapon);
-
-    float getPosX() const;
-
-    void setPosX(float posX);
-
-    float getPosY() const;
-
-    void setPosY(float posY);
+    void setPosY(int posY);
 
 protected:
     std::string name;
@@ -71,9 +41,8 @@ protected:
     int stamina;
     Armor* armor;
     Weapon* weapon;
-    float posX;
-    float posY;
-
+    int posX;
+    int posY;
 };
 
 

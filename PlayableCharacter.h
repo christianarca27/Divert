@@ -12,6 +12,10 @@
 
 class PlayableCharacter : GameCharacter {
 public:
+    PlayableCharacter(std::string n, int h, int l, int str, int r, int s, Race* rc=nullptr, Armor* a=nullptr, Weapon* w=nullptr, int x=0, int y=0) : GameCharacter(n, h, l, str, r, s, rc, a, w, x, y) {};
+
+    void move(int x, int y, GameMap gM) override;
+
     void openInventory(Inventory* inventory);
     void levelUp(int level, int exp);
     void switchCharacter(GameCharacter* characterList[]);
@@ -19,38 +23,14 @@ public:
     void registerObserver();
     void removeObserver();
     void notifyObserver();
-private:
-    Inventory* inventory;
-    std::string role;
-public:
-    Inventory *getInventory() const;
-
-    void setInventory(Inventory *inventory);
-
-    const std::string &getRole() const;
-
-    void setRole(const std::string &role);
-
-    const std::string &getGender() const;
-
-    void setGender(const std::string &gender);
 
     int getMoney() const;
 
     void setMoney(int money);
 
-    const std::string &getSpecialAbility() const;
-
-    void setSpecialAbility(const std::string &specialAbility);
-
-    int getExp() const;
-
-    void setExp(int exp);
-
-    GameCharacter *const *getCharacterList() const;
-
 private:
-    //class in file UML
+    Inventory* inventory;
+    std::string role;
     std::string gender;
     int money;
     std::string specialAbility;

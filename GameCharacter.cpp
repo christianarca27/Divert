@@ -31,43 +31,14 @@ void GameCharacter::attack(GameCharacter& enemy){
         enemy.hp=enemyHealth;
 }
 
-void GameCharacter::move(float posX, float posY, GameMap* gM) {
-
-    // implementazione
-
-
-}
-
-const std::string &GameCharacter::getName() const {
-    return name;
-}
-
-void GameCharacter::setName(const std::string &name) {
-    GameCharacter::name = name;
-}
-
-int GameCharacter::getHp() const {
-    return hp;
-}
-
-void GameCharacter::setHp(int hp) {
-    GameCharacter::hp = hp;
-}
-
-int GameCharacter::getLevel() const {
-    return level;
-}
-
-void GameCharacter::setLevel(int level) {
-    GameCharacter::level = level;
-}
-
-Race *GameCharacter::getRace() const {
-    return race;
-}
-
-void GameCharacter::setRace(Race *race) {
-    GameCharacter::race = race;
+void GameCharacter::move(int x, int y, GameMap gM) {
+    if (gM.getTileList()[gM.getMapTab()[gM.getHigh()*(posY+y)+(posX+x)]]->isCrossable()){
+        posX += x;
+        posY += y;
+        printf("\n(%d, %d)", posX, posY);
+    }
+    else
+        printf("\nMovimento non consentito ! (%d, %d)", posX, posY);
 }
 
 int GameCharacter::getStrength() const {
@@ -78,50 +49,18 @@ void GameCharacter::setStrength(int strength) {
     GameCharacter::strength = strength;
 }
 
-int GameCharacter::getResistance() const {
-    return resistance;
-}
-
-void GameCharacter::setResistance(int resistance) {
-    GameCharacter::resistance = resistance;
-}
-
-int GameCharacter::getStamina() const {
-    return stamina;
-}
-
-void GameCharacter::setStamina(int stamina) {
-    GameCharacter::stamina = stamina;
-}
-
-Armor *GameCharacter::getArmor() const {
-    return armor;
-}
-
-void GameCharacter::setArmor(Armor *armor) {
-    GameCharacter::armor = armor;
-}
-
-Weapon *GameCharacter::getWeapon() const {
-    return weapon;
-}
-
-void GameCharacter::setWeapon(Weapon *weapon) {
-    GameCharacter::weapon = weapon;
-}
-
-float GameCharacter::getPosX() const {
+int GameCharacter::getPosX() const {
     return posX;
 }
 
-void GameCharacter::setPosX(float posX) {
+void GameCharacter::setPosX(int posX) {
     GameCharacter::posX = posX;
 }
 
-float GameCharacter::getPosY() const {
+int GameCharacter::getPosY() const {
     return posY;
 }
 
-void GameCharacter::setPosY(float posY) {
+void GameCharacter::setPosY(int posY) {
     GameCharacter::posY = posY;
 }
