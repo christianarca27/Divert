@@ -8,6 +8,7 @@
 #include <list>
 #include "BuyableItems.h"
 #include <iostream>
+#include "PlayableCharacter.h"
 
 class Inventory {
 public:
@@ -19,7 +20,7 @@ public:
 
     void orderByLevel();
     void orderByName();
-    void useItem();
+    void useItem(PlayableCharacter& player, BuyableItems *item);
 
     int getCapacity() const;
 
