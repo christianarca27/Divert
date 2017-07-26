@@ -3,13 +3,8 @@
 //
 
 #include "Inventory.h"
-#include "Potion.h"
 
 Inventory::Inventory(int c) : capacity(c) {}
-
-void Inventory::useItem(PlayableCharacter &player, BuyableItems *item) {
-    item->useItem(& player);
-}
 
 int Inventory::getCapacity() const {
     return capacity;

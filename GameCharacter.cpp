@@ -31,14 +31,14 @@ void GameCharacter::attack(GameCharacter& enemy){
         enemy.hp=enemyHealth;
 }
 
-void GameCharacter::move(int x, int y, GameMap gM) {
-    if (gM.getTileList()[gM.getMapTab()[gM.getHigh()*(posY+y)+(posX+x)]]->isCrossable()){
+void GameCharacter::move(int x, int y, GameMap& gM) {
+    if ((posX+x) < gM.getLength() && (posY+y) < gM.getHigh() && gM.getTileList()[gM.getMapTab()[gM.getHigh()*(posY+y)+(posX+x)]]->isCrossable()){
         posX += x;
         posY += y;
-        //printf("\n(%d, %d)", posX, posY);
+        std::cout << "(" << posX << ", " << posY << ")" << std::endl;
     }
-    //else
-        //printf("\nMovimento non consentito ! (%d, %d)", posX, posY);
+    else
+        std::cout << "Movimento non consentito " << "(" << posX << ", " << posY << ")" << std::endl;
 }
 
 int GameCharacter::getStrength() const {

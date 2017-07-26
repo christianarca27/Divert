@@ -3,13 +3,6 @@
 //
 
 #include "Armor.h"
-#include "PlayableCharacter.h"
-
-void Armor::useItem(PlayableCharacter &player) {
-    Armor *ar= player.getArmor();
-    player.getInventory()->addItem(*ar);
-    player.setArmor(this);
-}
 
 int Armor::getDamageDecreaser() const {
     return damageDecreaser;

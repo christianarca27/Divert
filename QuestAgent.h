@@ -8,7 +8,7 @@
 
 #include "InteractiveCharacter.h"
 
-class QuestAgent: public InteractiveCharacter {
+class QuestAgent : public InteractiveCharacter {
 public:
     void addPlayableCharacter();
 

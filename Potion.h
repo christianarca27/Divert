@@ -7,14 +7,11 @@
 
 #include <string>
 #include "BuyableItems.h"
-#include "PlayableCharacter.h"
 
 class Potion: public BuyableItems {
 public:
     Potion(std::string t, int hp, int s, int r, std::string n, int p, int l, bool a) : type(t), hpIncrease(hp), strengthIncrease(s), resistanceIncrease(r), BuyableItems(n, p, l, a) {};
     ~Potion(){};
-
-    void useItem(PlayableCharacter& player) override;
 
     const std::string &getType() const;
 

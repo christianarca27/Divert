@@ -10,13 +10,14 @@
 #include "Armor.h"
 #include "Weapon.h"
 #include "GameMap.h"
+#include "Inventory.h"
 
 
 class GameCharacter {
 public:
     GameCharacter(std::string n, int h, int l, int str, int r, int s, Race* rc=nullptr, Armor* a=nullptr, Weapon* w=nullptr, int x=0, int y=0) : name(n), hp(h), level(l), strength(str), resistance(r), stamina(s), race(rc), weapon(w), posX(x), posY(y){};
 
-    virtual void move(int x, int y, GameMap gM)=0;
+    virtual void move(int x, int y, GameMap& gM)=0;
     virtual void attack(GameCharacter& enemy);
 
     int getStrength() const;

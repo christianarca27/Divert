@@ -2,9 +2,7 @@
 // Created by User on 25/06/2017.
 //
 #include <iostream>
-
 #include "Blacksmith.h"
-#include "PlayableCharacter.h"
 
 
 int Blacksmith::calcolateRepairCost(Weapon& brokenWeapon) {

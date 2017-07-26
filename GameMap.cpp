@@ -2,6 +2,7 @@
 // Created by chris on 07/07/2017.
 //
 
+#include <iostream>
 #include "GameMap.h"
 
 GameMap::GameMap(std::string n, int* mT, Tile *t0, Tile *t1, Tile *t2, int h, int l) {
@@ -20,6 +21,7 @@ void GameMap::displayMap(int posX, int posY) {
         for (i=posX; i<length; i++)
             tileList[mapTab[high*j+i]]->displayTile(i, j);
     }
+    std::cout << std::endl;
 }
 
 Tile *const *GameMap::getTileList() const {

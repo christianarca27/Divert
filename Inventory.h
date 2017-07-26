@@ -6,11 +6,9 @@
 #define DIVERTPROJECT_INVENTORY_H
 
 #include <list>
-#include "BuyableItems.h"
 #include <iostream>
-#include "PlayableCharacter.h"
-class BuyableItems;
-class PlayableCharacter;
+#include "BuyableItems.h"
+
 class Inventory {
 public:
     Inventory(int c=0);
@@ -21,7 +19,6 @@ public:
 
     void orderByLevel();
     void orderByName();
-    void useItem(PlayableCharacter& player, BuyableItems *item);
 
     int getCapacity() const;
 

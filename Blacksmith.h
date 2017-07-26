@@ -10,10 +10,12 @@
 #include "Weapon.h"
 #include "PlayableCharacter.h"
 
-class Blacksmith: public InteractiveCharacter {
+class Blacksmith : public InteractiveCharacter {
 public:
     Blacksmith (int x, int y, std::string n) : InteractiveCharacter (x, y, n) {};
+
     void repairWeapon(Weapon& brokenWeapon, PlayableCharacter& player);
+
     int calcolateRepairCost(Weapon& brokenWeapon);
 
 };

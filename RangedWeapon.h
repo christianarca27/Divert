@@ -6,14 +6,11 @@
 #define DIVERTPROJECT_RANGEDWEAPON_H
 
 #include "Weapon.h"
-#include "PlayableCharacter.h"
 
-class RangedWeapon: public Weapon {
+class RangedWeapon : public Weapon {
 public:
     RangedWeapon( int s, int d, int r, int i, int h, bool m, std::string n, int l, int p, bool a, int ra, int hw) : shots(s), Weapon(d, r, i, h, m, n, l, p, a, ra, hw) {};
     ~RangedWeapon() {};
-
-    void useItem (PlayableCharacter& player) override;
 
     int getShots() const;
 

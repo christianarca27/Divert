@@ -3,14 +3,7 @@
 //
 
 #include "Potion.h"
-void Potion::useItem(PlayableCharacter &player) {
-    int hp=hpIncrease+player.getHp();
-    int strenght=strengthIncrease+player.getStrength();
-    int resistance=resistanceIncrease+player.getResistance();
-    player.setHp(hp);
-    player.setStrength(strenght);
-    player.setResistance(resistance);
-}
+
 const std::string &Potion::getType() const {
     return type;
 }

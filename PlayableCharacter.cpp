@@ -4,10 +4,16 @@
 
 #include "PlayableCharacter.h"
 
-void PlayableCharacter::move(int x, int y, GameMap gM) {
+void PlayableCharacter::move(int x, int y, GameMap& gM) {
     //IMPLEMENTAZIONE CON LIBRERIA ESTERNA PER COMANDI
 
     GameCharacter::move(x, y, gM);
+}
+
+void PlayableCharacter::usePotion(Potion &potion) {
+    hp += (potion.getHpIncrease() * potion.getLevel());
+    strength += (potion.getStrengthIncrease() * potion.getLevel());
+    resistance += (potion.getResistanceIncrease() * potion.getLevel());
 }
 
 int PlayableCharacter::getMoney() const {
