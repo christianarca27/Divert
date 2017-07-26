@@ -7,11 +7,13 @@
 
 
 #include "BuyableItems.h"
-
+#include "PlayableCharacter.h"
 class Armor: public BuyableItems {
 public:
     Armor(int d, bool m,std::string n, int p, int l, bool a) : damageDecreaser(d), magical(m), BuyableItems(n, p, l, a) {};
-    ~Armor() {};
+    ~Armor() {}
+
+    void useItem(PlayableCharacter& player) override;
 
     int getDamageDecreaser() const;
 

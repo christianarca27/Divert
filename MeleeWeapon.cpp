@@ -4,6 +4,12 @@
 
 #include "MeleeWeapon.h"
 
+void MeleeWeapon::useItem(PlayableCharacter &player) {
+    Weapon *weapon=player.getWeapon();
+    player.getInventory()->addItem(*weapon);
+    player.setWeapon(this);
+}
+
 int MeleeWeapon::getSharpness() const {
     return sharpness;
 }

@@ -9,7 +9,8 @@
 #include "BuyableItems.h"
 #include <iostream>
 #include "PlayableCharacter.h"
-
+class BuyableItems;
+class PlayableCharacter;
 class Inventory {
 public:
     Inventory(int c=0);

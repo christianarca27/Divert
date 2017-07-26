@@ -17,3 +17,11 @@ int PlayableCharacter::getMoney() const {
 void PlayableCharacter::setMoney(int money) {
     PlayableCharacter::money = money;
 }
+
+Inventory *PlayableCharacter::getInventory() const {
+    return inventory;
+}
+
+void PlayableCharacter::setInventory(Inventory *inventory) {
+    PlayableCharacter::inventory = inventory;
+}

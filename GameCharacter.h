@@ -21,6 +21,14 @@ public:
 
     int getStrength() const;
 
+    int getResistance() const;
+
+    void setResistance(int resistance);
+
+    int getHp() const;
+
+    void setHp(int hp);
+
     void setStrength(int strength);
 
     int getPosX() const;
@@ -30,6 +38,14 @@ public:
     int getPosY() const;
 
     void setPosY(int posY);
+
+    Armor *getArmor() const;
+
+    void setArmor(Armor *armor);
+
+    Weapon *getWeapon() const;
+
+    void setWeapon(Weapon *weapon);
 
 protected:
     std::string name;

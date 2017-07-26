@@ -9,7 +9,7 @@
 #include "Inventory.h"
 #include "GameCharacter.h"
 #include "Interactive.h"
-
+class Inventory;
 class PlayableCharacter : GameCharacter {
 public:
     PlayableCharacter(std::string n, int h, int l, int str, int r, int s, Race* rc=nullptr, Armor* a=nullptr, Weapon* w=nullptr, int x=0, int y=0) : GameCharacter(n, h, l, str, r, s, rc, a, w, x, y) {};
@@ -23,6 +23,10 @@ public:
     void registerObserver();
     void removeObserver();
     void notifyObserver();
+
+    Inventory *getInventory() const;
+
+    void setInventory(Inventory *inventory);
 
     int getMoney() const;
 
