@@ -23,3 +23,11 @@ void EnemyCharacter::drop(PlayableCharacter& player,int level) {
             MeleeWeapon magicSword(20, false, 10, 1, 100, 0, true, "Sword of Destiny", level, 1000, true, 1, 2500);
     }
 }
+
+void EnemyCharacter::update() {
+    //da implementare
+}
+
+void EnemyCharacter::attack(GameCharacter &enemy) {
+    //da implementare
+}

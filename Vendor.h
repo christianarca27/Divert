@@ -14,6 +14,7 @@ public:
 
     void sellItem();
     void buyItem();
+
 private:
 
 };

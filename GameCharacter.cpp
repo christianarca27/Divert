@@ -9,26 +9,32 @@
 void GameCharacter::attack(GameCharacter& enemy){
     Dice d8(8);
     Dice d10 (10);
-    int rollResult=d8.roll(4);
-    int damage=this->weapon->getDamage()*this->weapon->getIntegrity()*rollResult+this->getStrength();
-    if (this->weapon->isMagical())
-        damage=damage*2;
-    int newNumberOfHits=this->weapon->getNumberOfHits();
-    this->weapon->setNumberOfHits(newNumberOfHits++);
-    int newIntegrity=(this->weapon->getHealtWeapon() / this->weapon->getNumberOfHits())*100;
-    this->weapon->setIntegrity(newIntegrity);
-    int resistance=enemy.resistance/d10.roll(4);
-    int enemyHealth= enemy.hp+resistance;
-    if (enemy.armor!= nullptr){
-        damage=damage-enemy.armor->getDamageDecreaser();
-                if (enemy.armor->isMagical())
-                    damage=damage/2;
+    int rollResult = d8.roll(4);
+    int damage;
+
+    if (weapon != nullptr) {
+        damage = (this->weapon->getDamage()) * (this->weapon->getIntegrity()) * (rollResult + this->getStrength());
+        if (this->weapon->isMagical())
+            damage *= 2;
+        int newNumberOfHits = (this->weapon->getNumberOfHits()) + 1;
+        this->weapon->setNumberOfHits(newNumberOfHits);
+        int newIntegrity = (this->weapon->getHealtWeapon() / this->weapon->getNumberOfHits()) * 100;
+        this->weapon->setIntegrity(newIntegrity);
+    } else{
+        damage = rollResult + this->getStrength();
     }
-    enemyHealth-=damage;
-    if (enemyHealth<=0)
-        std::cout<<"enemy is dead"<<std::endl;
+    int resistance = enemy.resistance / d10.roll(4);
+    int enemyHealth = enemy.hp + resistance;
+    if (enemy.armor != nullptr){
+        damage = damage - (enemy.armor->getDamageDecreaser());
+        if (enemy.armor->isMagical())
+            damage = damage / 2;
+    }
+    enemyHealth -= damage;
+    if (enemyHealth <= 0)
+        std::cout << "Enemy is dead." << std::endl;
     else
-        enemy.hp=enemyHealth;
+        enemy.hp = enemyHealth;
 }
 
 void GameCharacter::move(int x, int y, GameMap& gM) {

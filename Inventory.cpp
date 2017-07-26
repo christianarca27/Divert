@@ -6,6 +6,14 @@
 
 Inventory::Inventory(int c) : capacity(c) {}
 
+void Inventory::orderByLevel(){
+    //da implementare
+}
+
+void Inventory::orderByName(){
+    //da implementare
+}
+
 int Inventory::getCapacity() const {
     return capacity;
 }

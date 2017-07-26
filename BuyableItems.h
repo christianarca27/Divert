@@ -10,7 +10,6 @@
 class BuyableItems {
 public:
     explicit BuyableItems(std::string n, int p, int l=1, bool a=true) : name(n), price(p), level(l), availability(a) {};
-    virtual ~BuyableItems() {};
 
     virtual const std::string &getName() const;
 

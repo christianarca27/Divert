@@ -13,7 +13,7 @@
 
 class Magician : public InteractiveCharacter {
 public:
-    Magician(int x, int y, const std::string &n) : InteractiveCharacter(x, y, n) {};
+    Magician(int x, int y, const std::string n) : InteractiveCharacter(x, y, n) {};
     void castMagicWeapon(PlayableCharacter& player, Weapon& weapon);
     void castMagicArmor(PlayableCharacter& player, Armor& armor);
 

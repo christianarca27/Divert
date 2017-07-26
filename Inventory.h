@@ -11,7 +11,7 @@
 
 class Inventory {
 public:
-    Inventory(int c=0);
+    explicit Inventory(int c=0);
 
     void addItem(BuyableItems& item);
     void removeItem(BuyableItems& item);

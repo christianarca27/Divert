@@ -10,6 +10,8 @@
 
 class QuestAgent : public InteractiveCharacter {
 public:
+    QuestAgent(int x, int y, std::string n) : InteractiveCharacter(x, y, n) {};
+
     void addPlayableCharacter();
 
 };

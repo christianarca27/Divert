@@ -3,3 +3,7 @@
 //
 
 #include "InteractiveItems.h"
+
+void InteractiveItems::dropItems() {
+    //da implementare
+}

@@ -12,7 +12,7 @@
 
 class Blacksmith : public InteractiveCharacter {
 public:
-    Blacksmith (int x, int y, std::string n) : InteractiveCharacter (x, y, n) {};
+    Blacksmith (int x, int y, std::string& n) : InteractiveCharacter (x, y, n) {};
 
     void repairWeapon(Weapon& brokenWeapon, PlayableCharacter& player);
 

@@ -11,7 +11,6 @@
 class Armor : public BuyableItems {
 public:
     Armor(int d, bool m,std::string n, int p, int l, bool a) : damageDecreaser(d), magical(m), BuyableItems(n, p, l, a) {};
-    ~Armor() {}
 
     int getDamageDecreaser() const;
 
